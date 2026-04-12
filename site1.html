@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>أخبار المحتوى - موقع إخباري</title>
-    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <title>صانع محتوى سعودي يحقق مليون مشاهدة على يوتيوب</title>
     <style>
         * {
             margin: 0;
@@ -13,88 +12,48 @@
         }
         
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            font-family: 'Georgia', serif;
+            background-color: #f5f5f5;
             color: #333;
-            line-height: 1.6;
+            line-height: 1.8;
         }
         
         header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background-color: #1a1a1a;
             color: white;
-            padding: 20px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            padding: 20px 0;
+            border-bottom: 4px solid #d32f2f;
         }
         
-        .header-top {
+        .header-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            max-width: 1000px;
-            margin: 0 auto;
-            margin-bottom: 15px;
-            flex-wrap: wrap;
-            gap: 15px;
         }
         
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-size: 1.5em;
-            font-weight: bold;
-        }
-        
-        .logo-icon {
-            width: 50px;
-            height: 50px;
-            background: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        .site-title {
             font-size: 1.8em;
-            color: #667eea;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+            font-weight: bold;
+            letter-spacing: 2px;
         }
         
         .translate-btn {
-            background: white;
-            color: #667eea;
+            background-color: #d32f2f;
+            color: white;
             border: none;
             padding: 8px 15px;
-            border-radius: 5px;
+            border-radius: 3px;
             cursor: pointer;
-            font-weight: bold;
             font-size: 0.9em;
-            transition: all 0.3s ease;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            font-weight: bold;
+            transition: background-color 0.3s;
         }
         
         .translate-btn:hover {
-            background: #f0f0f0;
-            transform: scale(1.05);
-        }
-        
-        .header-content {
-            text-align: center;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-        
-        header h1 {
-            font-size: 2.5em;
-            margin-bottom: 5px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-        }
-        
-        header p {
-            font-size: 1.1em;
-            opacity: 0.9;
-        }
-        
-        #google_translate_element {
-            display: none;
+            background-color: #b71c1c;
         }
         
         .container {
@@ -103,233 +62,249 @@
             padding: 0 20px;
         }
         
-        .featured-article {
-            background: white;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+        .main-article {
+            background-color: white;
+            padding: 40px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
             margin-bottom: 30px;
-            border-left: 5px solid #667eea;
         }
         
-        .featured-article-header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 25px;
+        .article-header {
+            border-bottom: 3px solid #d32f2f;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
         }
         
-        .featured-article-header h2 {
-            font-size: 1.8em;
+        .article-date {
+            color: #666;
+            font-size: 0.9em;
             margin-bottom: 10px;
         }
         
-        .featured-article-header p {
-            font-size: 0.95em;
-            opacity: 0.9;
-        }
-        
-        .featured-article-content {
-            padding: 25px;
-        }
-        
-        .article-meta {
-            display: flex;
-            justify-content: space-between;
+        .article-title {
+            font-size: 2.2em;
+            font-weight: bold;
+            color: #1a1a1a;
             margin-bottom: 15px;
-            font-size: 0.9em;
+            line-height: 1.3;
+        }
+        
+        .article-subtitle {
+            font-size: 1.1em;
             color: #666;
-            border-bottom: 2px solid #f0f0f0;
-            padding-bottom: 10px;
-            flex-wrap: wrap;
-            gap: 10px;
+            font-style: italic;
+        }
+        
+        .article-content {
+            font-size: 1.05em;
+            line-height: 1.9;
+            color: #333;
+        }
+        
+        .article-content p {
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+        
+        .highlight-box {
+            background-color: #f0f0f0;
+            border-right: 4px solid #d32f2f;
+            padding: 20px;
+            margin: 25px 0;
+            font-weight: bold;
+            color: #1a1a1a;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .stat-box {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 2em;
+            font-weight: bold;
+            color: #d32f2f;
+            margin-bottom: 10px;
+        }
+        
+        .stat-label {
+            color: #666;
+            font-size: 0.95em;
         }
         
         .qa-section {
-            background: #f8f9ff;
-            padding: 20px;
-            border-radius: 8px;
-            margin: 20px 0;
+            background-color: #fafafa;
+            padding: 30px;
+            margin: 30px 0;
+            border-left: 4px solid #d32f2f;
+        }
+        
+        .qa-section h3 {
+            font-size: 1.4em;
+            margin-bottom: 25px;
+            color: #1a1a1a;
         }
         
         .qa-item {
-            margin: 20px 0;
-            padding: 15px;
-            background: white;
-            border-radius: 6px;
-            border-right: 4px solid #667eea;
+            margin-bottom: 25px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #ddd;
         }
         
-        .qa-item strong {
-            color: #667eea;
-            font-size: 1.05em;
-            display: block;
+        .qa-item:last-child {
+            border-bottom: none;
+        }
+        
+        .question {
+            font-weight: bold;
+            color: #d32f2f;
             margin-bottom: 10px;
+            font-size: 1.05em;
         }
         
-        .qa-item p {
-            color: #555;
+        .answer {
+            color: #333;
             line-height: 1.8;
         }
         
-        .news-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-            margin-top: 30px;
-        }
-        
-        .news-card {
-            background: white;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border-top: 3px solid #667eea;
-        }
-        
-        .news-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 16px rgba(0,0,0,0.15);
-        }
-        
-        .news-card-header {
-            background: #667eea;
-            color: white;
-            padding: 15px;
-            font-weight: bold;
-        }
-        
-        .news-card-content {
-            padding: 15px;
-        }
-        
-        .news-card-content p {
-            font-size: 0.95em;
-            color: #666;
-        }
-        
         footer {
-            background: #333;
-            color: white;
+            background-color: #1a1a1a;
+            color: #999;
             text-align: center;
             padding: 20px;
-            margin-top: 40px;
             font-size: 0.9em;
+            border-top: 4px solid #d32f2f;
         }
         
-        .date {
-            color: #667eea;
-            font-weight: bold;
+        #google_translate_element {
+            display: none;
         }
         
-        @media (max-width: 600px) {
-            .header-top {
+        @media (max-width: 768px) {
+            .header-container {
                 flex-direction: column;
-                text-align: center;
+                gap: 15px;
             }
             
-            header h1 {
-                font-size: 1.8em;
+            .article-title {
+                font-size: 1.6em;
             }
             
-            .logo {
-                justify-content: center;
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .main-article {
+                padding: 20px;
             }
         }
     </style>
+    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </head>
 <body>
     <header>
-        <div class="header-top">
-            <div class="logo">
-                <div class="logo-icon">📰</div>
-                <span>أخبار المحتوى</span>
-            </div>
+        <div class="header-container">
+            <div class="site-title">📰 الأخبار اليومية</div>
             <button class="translate-btn" onclick="toggleTranslate()">🌐 ترجمة</button>
         </div>
         <div id="google_translate_element"></div>
-        <div class="header-content">
-            <h1>أخبار المحتوى</h1>
-            <p>منصة إخبارية متخصصة في أخبار صناع المحتوى والمؤثرين</p>
-        </div>
     </header>
     
     <div class="container">
-        <div class="featured-article">
-            <div class="featured-article-header">
-                <h2>حوار حصري: موهبة صاعدة في عالم صناعة المحتوى</h2>
-                <p>تعرف على قصة نجاح صانع محتوى شاب حقق ملايين المشاهدات</p>
+        <article class="main-article">
+            <div class="article-header">
+                <div class="article-date">15 أكتوبر 2019</div>
+                <h1 class="article-title">صانع محتوى سعودي يحقق مليون مشاهدة على يوتيوب</h1>
+                <p class="article-subtitle">رحلة نجاح من الصفر إلى المليون: كيف استطاع "ليون" بناء إمبراطورية محتوى في وقت قياسي</p>
             </div>
             
-            <div class="featured-article-content">
-                <div class="article-meta">
-                    <span><strong>التاريخ:</strong> <span class="date">15 أكتوبر 2019</span></span>
-                    <span><strong>الكاتب:</strong> فريق التحرير</span>
-                    <span><strong>القسم:</strong> حوارات</span>
+            <div class="article-content">
+                <p>
+                    في عالم صناعة المحتوى الرقمي، حيث ينافس الآلاف لجذب انتباه الجمهور، نجح صانع محتوى سعودي شاب في تحقيق إنجاز لافت بوصوله إلى مليون مشاهدة على منصة يوتيوب. يعرّف نفسه باسم "ليون" (@CR7_KSA_)، وقد استطاع في فترة زمنية قصيرة نسبياً بناء قاعدة جماهيرية قوية تتابع محتواه بشغف واهتمام.
+                </p>
+                
+                <p>
+                    يمثل هذا الإنجاز نموذجاً مشجعاً لرواد المحتوى الناشئين في المنطقة العربية، حيث يثبت أن الإصرار والعمل المستمر يمكنهما أن يحققا نتائج ملموسة حتى في بيئة تنافسية للغاية.
+                </p>
+                
+                <div class="highlight-box">
+                    الإنجاز: وصول قناة ليون إلى مليون مشاهدة مع 3,889 مشترك نشط
                 </div>
                 
+                <p>
+                    تتميز قناة ليون بمحتوى أصيل ومتنوع يعكس شخصيته الفريدة وأسلوبه المميز. بدلاً من اتباع النمط السائد أو تقليد الآخرين، اختار ليون طريقه الخاص، مما جعله يبرز وسط الكم الهائل من صناع المحتوى.
+                </p>
+                
+                <div class="stats-grid">
+                    <div class="stat-box">
+                        <div class="stat-number">1.4M</div>
+                        <div class="stat-label">إجمالي المشاهدات</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-number">3,889</div>
+                        <div class="stat-label">عدد المشتركين</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-number">20.5K</div>
+                        <div class="stat-label">المعجبون</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-number">1.6K</div>
+                        <div class="stat-label">التعليقات</div>
+                    </div>
+                </div>
+                
+                <p>
+                    خوارزميات يوتيوب معقدة وتفضل المحتوى الذي يحقق معدل تفاعل عالي. لكن ليون استطاع كسر هذا السقف من خلال فهمه العميق لاحتياجات جمهوره وتقديم محتوى يستحق الوقت والتفاعل. معدل التفاعل على قناته يشير إلى مجتمع مخلص وحقيقي.
+                </p>
+                
                 <div class="qa-section">
-                    <h3 style="color: #667eea; margin-bottom: 20px;">أسئلة وأجوبة</h3>
+                    <h3>حوار حصري مع صانع المحتوى</h3>
                     
                     <div class="qa-item">
-                        <strong>س: كيف بدأت رحلتك في صناعة المحتوى؟</strong>
-                        <p>ج: بدأت بفكرة بسيطة وشغف حقيقي تجاه المجال. كنت أعتقد أن لدي شيئاً مميزاً لأقدمه للمشاهدين، فقررت أن أبدأ رحلتي بكل جرأة وإصرار.</p>
+                        <div class="question">س: كيف بدأت رحلتك في صناعة المحتوى؟</div>
+                        <div class="answer">ج: بدأت بفكرة بسيطة وشغف حقيقي. لم أكن أملك أفضل المعدات أو أكبر الميزانية، لكنني كنت أملك رؤية واضحة ورغبة قوية في تقديم شيء مختلف. بدأت بما لدي وتطورت مع الوقت.</div>
                     </div>
                     
                     <div class="qa-item">
-                        <strong>س: ما أكبر التحديات التي واجهتها؟</strong>
-                        <p>ج: التحدي الأكبر كان الاستمرارية والصبر. في البداية، كانت الأرقام بطيئة جداً، لكنني لم أستسلم. استمررت في تحسين جودة المحتوى والتفاعل مع المشاهدين.</p>
+                        <div class="question">س: ما الذي يميز محتواك عن الآخرين؟</div>
+                        <div class="answer">ج: الأصالة والصدق. أنا لا أحاول أن أكون شخصاً آخر أو أتابع اتجاهات مؤقتة. أقدم محتوى يعكس من أنا حقاً، وهذا ما يجذب الناس الحقيقيين.</div>
                     </div>
                     
                     <div class="qa-item">
-                        <strong>س: كيف تختار موضوعات محتواك؟</strong>
-                        <p>ج: أختار الموضوعات بناءً على ما يهم جمهوري وما أشعر بشغف حقيقي تجاهه. الجودة والأصالة هما أساس كل محتوى أنتجه.</p>
+                        <div class="question">س: كم استغرقت رحلة الوصول للمليون مشاهدة؟</div>
+                        <div class="answer">ج: لم تكن رحلة سريعة، لكنها كانت مستدامة. الأهم من السرعة هو الاستمرارية والالتزام بالجودة. كل مشاهدة تمثل شخصاً اختار قضاء وقته معي.</div>
                     </div>
                     
                     <div class="qa-item">
-                        <strong>س: ما نصيحتك للمبتدئين؟</strong>
-                        <p>ج: كونوا أنفسكم، لا تحاولوا تقليد أحد. ركزوا على جودة المحتوى وليس الكمية. الجمهور يقدر الأصالة والاستمرارية.</p>
+                        <div class="question">س: ما أكبر تحدٍ واجهته؟</div>
+                        <div class="answer">ج: التحدي الأكبر كان عدم الاستسلام في البداية عندما كانت الأرقام صغيرة. الصبر والإيمان بالرؤية هما ما ساعداني على المضي قدماً.</div>
                     </div>
                     
                     <div class="qa-item">
-                        <strong>س: هل تخطط لتطوير قناتك؟</strong>
-                        <p>ج: بالتأكيد! لدي خطط طموحة لتطوير المحتوى وتقديم أشياء جديدة ومبتكرة. الهدف هو الوصول إلى أكبر عدد من المشاهدين بمحتوى ذي قيمة.</p>
+                        <div class="question">س: هل تخطط لتطوير قناتك في المستقبل؟</div>
+                        <div class="answer">ج: بالتأكيد! لدي خطط طموحة لتطوير المحتوى وتقديم أشياء جديدة ومبتكرة. الهدف هو الوصول إلى أكبر عدد من المشاهدين بمحتوى ذي قيمة حقيقية.</div>
                     </div>
                 </div>
+                
+                <p>
+                    يمثل نجاح ليون شهادة حية على أن النجاح في عالم المحتوى الرقمي ليس حكراً على من يملكون أكبر الميزانيات أو أفضل المعدات. بل هو نتيجة لمزيج من الشغف والاستمرارية والفهم العميق للجمهور. في الأشهر القادمة، سيكون من المثير للاهتمام متابعة تطور قناة ليون ورؤية إلى أين ستصل.
+                </p>
             </div>
-        </div>
-        
-        <h2 style="color: #667eea; margin: 30px 0; text-align: center;">أخبار أخرى من المنصة</h2>
-        
-        <div class="news-grid">
-            <div class="news-card">
-                <div class="news-card-header">أحمد محمود - منتج محتوى</div>
-                <div class="news-card-content">
-                    <p><strong>تاريخ النشر:</strong> <span class="date">12 أكتوبر 2019</span></p>
-                    <p>حقق محمود 500 ألف مشترك خلال 8 أشهر فقط بمحتوى متنوع وجودة عالية.</p>
-                </div>
-            </div>
-            
-            <div class="news-card">
-                <div class="news-card-header">فاطمة علي - مدونة تقنية</div>
-                <div class="news-card-content">
-                    <p><strong>تاريخ النشر:</strong> <span class="date">10 أكتوبر 2019</span></p>
-                    <p>تشارك فاطمة تجربتها في بناء مجتمع تقني قوي حول قناتها.</p>
-                </div>
-            </div>
-            
-            <div class="news-card">
-                <div class="news-card-header">محمد سالم - مراجع ألعاب</div>
-                <div class="news-card-content">
-                    <p><strong>تاريخ النشر:</strong> <span class="date">8 أكتوبر 2019</span></p>
-                    <p>وصل سالم إلى مليون مشاهدة بمراجعات متخصصة وصادقة للألعاب الحديثة.</p>
-                </div>
-            </div>
-        </div>
+        </article>
     </div>
     
     <footer>
-        <p>&copy; 2019 أخبار المحتوى - جميع الحقوق محفوظة | منصة إخبارية متخصصة</p>
+        <p>&copy; 2019 الأخبار اليومية | جميع الحقوق محفوظة</p>
     </footer>
     
     <script>
@@ -343,17 +318,7 @@
         
         function toggleTranslate() {
             const element = document.getElementById('google_translate_element');
-            if (element.style.display === 'none' || element.style.display === '') {
-                element.style.display = 'block';
-                setTimeout(() => {
-                    const translateFrame = document.querySelector('iframe');
-                    if (translateFrame) {
-                        translateFrame.style.display = 'block';
-                    }
-                }, 100);
-            } else {
-                element.style.display = 'none';
-            }
+            element.style.display = element.style.display === 'none' ? 'block' : 'none';
         }
     </script>
 </body>
