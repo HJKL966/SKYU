@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ما بعد المليون مشاهدة: حوار حول طموحات صانع محتوى صاعد</title>
+    <title>فن الإبداع - منصة ترفيهية</title>
+    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     <style>
         * {
             margin: 0;
@@ -12,174 +13,356 @@
         }
         
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #ffffff;
-            color: #000000;
-            line-height: 1.8;
-        }
-        
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 40px 20px;
+            font-family: 'Trebuchet MS', Arial, sans-serif;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            color: #fff;
+            line-height: 1.6;
         }
         
         header {
-            text-align: center;
-            margin-bottom: 40px;
-            border-bottom: 2px solid #000000;
-            padding-bottom: 30px;
+            background: linear-gradient(90deg, #ff6f00 0%, #ff8f00 50%, #ffa726 100%);
+            padding: 25px 20px;
+            box-shadow: 0 6px 15px rgba(255, 111, 0, 0.4);
         }
         
-        .date {
-            color: #666666;
-            font-size: 14px;
-            margin-bottom: 10px;
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+            gap: 15px;
         }
         
-        h1 {
-            font-size: 32px;
-            margin-bottom: 20px;
-            font-weight: 700;
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 1.7em;
+            font-weight: bold;
+            letter-spacing: 1px;
         }
         
-        .channel-info {
+        .logo-icon {
+            width: 55px;
+            height: 55px;
+            background: white;
+            border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 20px;
-            margin-top: 30px;
-            flex-wrap: wrap;
+            font-size: 2em;
+            color: #ff6f00;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.3);
         }
         
-        .channel-avatar {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            border: 2px solid #000000;
-            object-fit: cover;
+        .translate-btn {
+            background: white;
+            color: #ff6f00;
+            border: none;
+            padding: 10px 18px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 0.9em;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
         }
         
-        .channel-details {
-            text-align: right;
+        .translate-btn:hover {
+            background: #ffe0b2;
+            transform: scale(1.08);
         }
         
-        .channel-details h3 {
-            font-size: 18px;
+        .header-content {
+            text-align: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        header h1 {
+            font-size: 2.8em;
             margin-bottom: 5px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
         }
         
-        .channel-details p {
-            color: #666666;
-            font-size: 14px;
+        header p {
+            font-size: 1.05em;
+            opacity: 0.95;
         }
         
-        .content {
-            margin-top: 40px;
+        #google_translate_element {
+            display: none;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+        
+        .featured-interview {
+            background: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(255, 111, 0, 0.2);
+            margin-bottom: 30px;
+            border-left: 6px solid #ff6f00;
+        }
+        
+        .featured-interview-header {
+            background: linear-gradient(90deg, #ff6f00 0%, #ff8f00 100%);
+            color: white;
+            padding: 30px;
+        }
+        
+        .featured-interview-header h2 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+        
+        .featured-interview-header p {
+            font-size: 0.95em;
+            opacity: 0.9;
+        }
+        
+        .featured-interview-content {
+            padding: 30px;
+        }
+        
+        .interview-meta {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            font-size: 0.9em;
+            color: #bbb;
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
+            flex-wrap: wrap;
+            gap: 10px;
         }
         
         .qa-section {
-            margin-bottom: 35px;
-            padding-bottom: 25px;
-            border-bottom: 1px solid #e0e0e0;
+            background: #2a2a2a;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-left: 4px solid #ff6f00;
         }
         
-        .qa-section:last-child {
-            border-bottom: none;
+        .qa-item {
+            margin: 20px 0;
+            padding: 15px;
+            background: #1a1a1a;
+            border-radius: 6px;
+            border-right: 3px solid #ff6f00;
         }
         
-        .question {
-            font-weight: 700;
-            font-size: 16px;
-            margin-bottom: 12px;
-            color: #000000;
+        .qa-item strong {
+            color: #ffa726;
+            font-size: 1.05em;
+            display: block;
+            margin-bottom: 10px;
         }
         
-        .answer {
-            color: #333333;
-            font-size: 15px;
+        .qa-item p {
+            color: #ddd;
             line-height: 1.8;
         }
         
+        .interviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .interview-card {
+            background: #2a2a2a;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(255, 111, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-top: 4px solid #ff6f00;
+        }
+        
+        .interview-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 20px rgba(255, 111, 0, 0.25);
+        }
+        
+        .interview-card-header {
+            background: linear-gradient(90deg, #ff6f00 0%, #ff8f00 100%);
+            color: white;
+            padding: 15px;
+            font-weight: bold;
+            font-size: 0.95em;
+        }
+        
+        .interview-card-content {
+            padding: 15px;
+        }
+        
+        .interview-card-content p {
+            font-size: 0.9em;
+            color: #bbb;
+        }
+        
         footer {
-            margin-top: 50px;
-            padding-top: 30px;
-            border-top: 2px solid #000000;
+            background: #000;
+            color: #888;
             text-align: center;
-            color: #666666;
-            font-size: 13px;
+            padding: 20px;
+            margin-top: 40px;
+            font-size: 0.85em;
+            border-top: 3px solid #ff6f00;
+        }
+        
+        .date {
+            color: #ffa726;
+            font-weight: bold;
         }
         
         @media (max-width: 600px) {
-            h1 {
-                font-size: 24px;
-            }
-            
-            .channel-info {
+            .header-top {
                 flex-direction: column;
+                text-align: center;
             }
             
-            .channel-details {
-                text-align: center;
+            header h1 {
+                font-size: 1.8em;
+            }
+            
+            .logo {
+                justify-content: center;
             }
         }
     </style>
 </head>
 <body>
+    <header>
+        <div class="header-top">
+            <div class="logo">
+                <div class="logo-icon">🎬</div>
+                <span>فن الإبداع</span>
+            </div>
+            <button class="translate-btn" onclick="toggleTranslate()">🌐 ترجمة</button>
+        </div>
+        <div id="google_translate_element"></div>
+        <div class="header-content">
+            <h1>فن الإبداع</h1>
+            <p>منصة ترفيهية متخصصة في حوارات صناع المحتوى والمبدعين</p>
+        </div>
+    </header>
+    
     <div class="container">
-        <header>
-            <div class="date">1 ديسمبر 2022</div>
-            <h1>ما بعد المليون مشاهدة: حوار حول طموحات صانع محتوى صاعد</h1>
-            <div class="channel-info">
-                <img src="assets/channel.webp" alt="قناة ليون" class="channel-avatar">
-                <div class="channel-details">
-                    <h3>ليون - Leon</h3>
-                    <p>@CR7_KSA_</p>
-                    <p>3,889 مشترك • 1.4 مليون مشاهدة</p>
+        <div class="featured-interview">
+            <div class="featured-interview-header">
+                <h2>حوار حصري: رحلة الطموح والإبداع</h2>
+                <p>لقاء خاص مع صانع محتوى يشارك أحلامه وطموحاته المستقبلية</p>
+            </div>
+            
+            <div class="featured-interview-content">
+                <div class="interview-meta">
+                    <span><strong>التاريخ:</strong> <span class="date">10 أغسطس 2022</span></span>
+                    <span><strong>المذيع:</strong> فريق المقابلات</span>
+                    <span><strong>القسم:</strong> حوارات حصرية</span>
                 </div>
-            </div>
-        </header>
-        
-        <div class="content">
-            <div class="qa-section">
-                <div class="question">س: الوصول إلى مليون مشاهدة هو محطة مهمة. ما هو شعورك حيال هذا الإنجاز؟</div>
-                <div class="answer">ج: إنه شعور رائع ومحفز جداً. هذا الرقم ليس مجرد عدد، بل هو دليل على أن هناك ملايين المشاهدات من آلاف الأشخاص، وهذا يعني لي الكثير. كل مشاهدة تمثل شخصاً اختار قضاء وقته معي، وهذا مسؤولية كبيرة وشرف أكبر.</div>
-            </div>
-            
-            <div class="qa-section">
-                <div class="question">س: بعد هذا النجاح، ما هي خططك المستقبلية للقناة؟</div>
-                <div class="answer">ج: أطمح لمواصلة النمو بشكل مستدام. خطتي هي تطوير جودة الإنتاج بشكل أكبر، وتقديم أفكار جديدة ومبتكرة تعكس تطور فكري وإبداعي. هذا النجاح هو البداية فقط، والأفضل قادم بإذن الله.</div>
-            </div>
-            
-            <div class="qa-section">
-                <div class="question">س: هل تفكر في التوسع إلى منصات أخرى مثل تيك توك؟</div>
-                <div class="answer">ج: نعم، بالتأكيد. كل منصة لها جمهورها وطريقتها الخاصة. أرى في تيك توك فرصة للوصول إلى شريحة جديدة من الجمهور وتقديم محتوى سريع ومختلف يتناسب مع طبيعة المنصة. التنوع في المنصات يعني وصول أوسع.</div>
-            </div>
-            
-            <div class="qa-section">
-                <div class="question">س: ما هو أكبر حلم تأمل في تحقيقه من خلال صناعة المحتوى؟</div>
-                <div class="answer">ج: حلمي الأكبر هو أن أترك بصمة إيجابية وحقيقية. أريد أن أتمكن من تحويل هذا الشغف إلى عمل مستدام يعيش منه بكرامة. الأهم من ذلك هو بناء مجتمع قوي ومترابط حول القناة، مجتمع يشعر بالانتماء والقيمة.</div>
-            </div>
-            
-            <div class="qa-section">
-                <div class="question">س: كيف تخطط للحفاظ على اهتمام جمهورك الحالي؟</div>
-                <div class="answer">ج: من خلال الاستماع الحقيقي لهم. سأستمر في قراءة التعليقات والاقتراحات، وأخذها بعين الاعتبار في محتواي. سأحاول دائماً مفاجأة جمهوري بمحتوى جديد وممتع، وفي نفس الوقت الحفاظ على الأصالة والجودة التي عرفوني بها.</div>
-            </div>
-            
-            <div class="qa-section">
-                <div class="question">س: ما هي الرسالة التي توجهها لكل من يطمح لدخول هذا المجال؟</div>
-                <div class="answer">ج: ابدأ بما لديك الآن. لا تنتظر الكاميرا المثالية أو الظروف المثالية. الشغف والأصالة هما أهم أدواتك. لا تحاول تقليد الآخرين، بل ابحث عن الشيء الذي يميزك. التعلم المستمر والصبر هما مفتاح النجاح في هذا المجال.</div>
-            </div>
-            
-            <div class="qa-section">
-                <div class="question">س: كلمة أخيرة توجهها لمتابعيك.</div>
-                <div class="answer">ج: شكراً لكم من القلب. أنتم السبب في كل هذا النجاح، ودعمكم هو ما يدفعني للاستمرار والتطور. أعدكم بأن القادم سيكون أفضل، وأن سأستمر في تقديم محتوى يستحق وقتكم وتفاعلكم. معاً سنصنع شيئاً جميلاً.</div>
+                
+                <div class="qa-section">
+                    <h3 style="color: #ffa726; margin-bottom: 20px;">أسئلة وأجوبة</h3>
+                    
+                    <div class="qa-item">
+                        <strong>س: ما هي أحلامك المستقبلية؟</strong>
+                        <p>ج: أحلم بأن أصبح مؤثراً حقيقياً يغير حياة الناس بمحتواي. ليس فقط الأرقام والإحصائيات، بل التأثير الإيجابي على المجتمع هو ما يهمني حقاً.</p>
+                    </div>
+                    
+                    <div class="qa-item">
+                        <strong>س: ما هي الخطوات التي تخطط لها؟</strong>
+                        <p>ج: أخطط لتطوير محتوى أكثر تنوعاً وتأثيراً. كما أريد بناء مجتمع قوي حول قناتي يشاركني الرؤية والقيم.</p>
+                    </div>
+                    
+                    <div class="qa-item">
+                        <strong>س: هل تفكر في التوسع خارج يوتيوب؟</strong>
+                        <p>ج: بالتأكيد! أريد الحضور على منصات متعددة وربما إطلاق مشاريع خاصة بي. التنويع مهم جداً في هذا المجال.</p>
+                    </div>
+                    
+                    <div class="qa-item">
+                        <strong>س: ما رسالتك للمبتدئين؟</strong>
+                        <p>ج: لا تستسلموا للفشل الأولي. كل الناجحين بدأوا من الصفر. ركزوا على الرؤية الكبيرة ولا تنسوا الاستمتاع بالرحلة.</p>
+                    </div>
+                    
+                    <div class="qa-item">
+                        <strong>س: كيف تحافظ على الدافع والحماس؟</strong>
+                        <p>ج: من خلال تذكري بسبب بداياتي وتأثير محتواي على الناس. كما أستمع لقصص نجاح الآخرين وأتعلم منها.</p>
+                    </div>
+                    
+                    <div class="qa-item">
+                        <strong>س: ما أكبر درس تعلمته؟</strong>
+                        <p>ج: أن الصبر والاستمرارية أهم من السرعة. النجاح الحقيقي يأتي ببطء لكن بثبات وقوة.</p>
+                    </div>
+                </div>
             </div>
         </div>
         
-        <footer>
-            <p>© 2022 - مقابلة إعلامية مع صانع محتوى يوتيوب | جميع الحقوق محفوظة</p>
-        </footer>
+        <h2 style="color: #ffa726; margin: 30px 0; text-align: center;">حوارات أخرى مع مبدعين</h2>
+        
+        <div class="interviews-grid">
+            <div class="interview-card">
+                <div class="interview-card-header">سارة الفنانة - رسامة ومصممة</div>
+                <div class="interview-card-content">
+                    <p><strong>تاريخ النشر:</strong> <span class="date">8 أغسطس 2022</span></p>
+                    <p>تشارك سارة قصتها في بناء مسيرة فنية ناجحة من خلال التواصل الاجتماعي.</p>
+                </div>
+            </div>
+            
+            <div class="interview-card">
+                <div class="interview-card-header">خالد الموسيقار - منتج موسيقي</div>
+                <div class="interview-card-content">
+                    <p><strong>تاريخ النشر:</strong> <span class="date">6 أغسطس 2022</span></p>
+                    <p>حوار عن الموسيقى والإبداع والتحديات التي يواجهها المنتجون الموسيقيون.</p>
+                </div>
+            </div>
+            
+            <div class="interview-card">
+                <div class="interview-card-header">ليلى الممثلة - ممثلة وفنانة</div>
+                <div class="interview-card-content">
+                    <p><strong>تاريخ النشر:</strong> <span class="date">4 أغسطس 2022</span></p>
+                    <p>تحكي ليلى عن تجربتها في التمثيل والانتقال من المسرح إلى الشاشة.</p>
+                </div>
+            </div>
+        </div>
     </div>
+    
+    <footer>
+        <p>&copy; 2022 فن الإبداع - جميع الحقوق محفوظة | منصة ترفيهية متخصصة</p>
+    </footer>
+    
+    <script>
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'ar',
+                includedLanguages: 'ar,en,fr,es,de,zh-CN,ja',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+        
+        function toggleTranslate() {
+            const element = document.getElementById('google_translate_element');
+            if (element.style.display === 'none' || element.style.display === '') {
+                element.style.display = 'block';
+                setTimeout(() => {
+                    const translateFrame = document.querySelector('iframe');
+                    if (translateFrame) {
+                        translateFrame.style.display = 'block';
+                    }
+                }, 100);
+            } else {
+                element.style.display = 'none';
+            }
+        }
+    </script>
 </body>
 </html>
